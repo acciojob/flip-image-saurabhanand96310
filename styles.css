@@ -1,7 +1,29 @@
 /* Your CSS code here. */
-.flip{
-	width:100px;
+.flip {
+    position: relative;
+    width: 100px;
+    height: 100px;
 }
-/* #flip:hover{
-	background-image:https://live.staticflickr.com/8138/29099429912_0659caf55b_b.jpg
-} */
+
+.flip img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.flip .initial {
+    opacity: 1;
+}
+
+.flip .final {
+    opacity: 0;
+}
+
+.flip:hover .initial {
+    opacity: 0;
+}
+
+.flip:hover .final {
+    opacity: 1;
+}
